@@ -1,5 +1,6 @@
 let buttons=document.querySelectorAll('button');
 let display=document.querySelector('.display');
+let audio=new Audio('button.mp3');
 let str='';
 let RGB=()=>{
     color1=Math.ceil(Math.random()*255);
@@ -35,6 +36,7 @@ buttons.forEach((btn)=>{
     else{
         display.innerText+=val;
     }
+          audio.play();
    })
 })
 
