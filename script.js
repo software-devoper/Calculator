@@ -25,13 +25,14 @@ buttons.forEach((btn)=>{
 
     }
     else if(val=='='){
-        str=eval(display.innerText);
-        display.innerText=str;
+         try {
+            const result = eval(display.innerText);
+            display.innerText = result ?? ''; 
+        } catch {
+            display.innerText = 'Error';
+        }
     }
     else{
-        if(display.innerText==0){
-            display.innerText=' ';
-        }
         display.innerText+=val;
     }
    })
