@@ -5,31 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcultor</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
+       <div class="mode">
+        <div class="toggle">
+            <div class="circle"><i class="fa-solid fa-sun" id="sun"></i></div>
+        </div>
+       </div>
         <div class="display"></div>
         <div class="buttons">
-            <button class="op">AC</button>
-            <button class="op">%</button>
-            <button class="op">DEL</button>
-            <button class="op">/</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="op">*</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="op">-</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="op">+</button>
-            <button>00</button>
-            <button>0</button>
-            <button class="dot">.</button>
-            <button class="equal">=</button>
+            <button class="op" id="ov" >AC</button>
+            <button class="op" id="ov">DEL</button>
+            <button class="op" id="ma">%</button>
+            <button class="op" id="ma">/</button>
+            <button  id="or">7</button>
+            <button  id="or">8</button>
+            <button  id="or">9</button>
+            <button class="op" id="ma">*</button>
+            <button  id="or">4</button>
+            <button  id="or">5</button>
+            <button  id="or">6</button>
+            <button class="op" id="ma">-</button>
+            <button  id="or">1</button>
+            <button  id="or">2</button>
+            <button id="or">3</button>
+            <button class="op" id="ma">+</button>
+            <button  id="or">00</button>
+            <button  id="or">0</button>
+            <button class="dot" id="ma">.</button>
+            <button class="equal" id="ma">=</button>
         </div>
     </div>
 </body>
