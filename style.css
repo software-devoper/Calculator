@@ -1,23 +1,27 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-style: italic;
     color: white;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: rgb(67, 90, 107);
+    transition: all 1s;
 }
-.container{
+
+.container {
     height: 70vh;
     width: 25vw;
-    background: linear-gradient(to left,rgb(123, 170, 120),rgb(89, 179, 179));
+    background: linear-gradient(to left, rgb(123, 170, 120), rgb(89, 179, 179));
     border-radius: 5px;
 }
-.display{
+
+.display {
     height: 20%;
     width: 91%;
     margin-top: 15px;
@@ -27,11 +31,13 @@ body{
     align-items: center;
     font-size: 70px;
     overflow: hidden;
-    background:rgb(47, 46, 46);
+    background: rgb(47, 46, 46);
     animation: ch 3s linear infinite;
     border-radius: 5px;
+    transition: all 1s;
 }
-.buttons{
+
+.buttons {
     height: 70%;
     width: 90%;
     margin-left: 15px;
@@ -42,10 +48,11 @@ body{
     flex-wrap: wrap;
     gap: 2px;
     padding: 2px;
-    background: linear-gradient(45deg,rgb(197, 87, 169),rgb(228, 51, 3));
+    background: linear-gradient(45deg, rgb(197, 87, 169), rgb(228, 51, 3));
     border-radius: 8px;
 }
-button{
+
+button {
     height: 18%;
     width: 20%;
     margin-left: 5px;
@@ -53,28 +60,139 @@ button{
     cursor: pointer;
     font-size: larger;
     border-radius: 20px;
-    background: linear-gradient(45deg,blue,cyan);
+    background: linear-gradient(45deg, blue, cyan);
     border: 0;
 }
-.dot{
+
+.dot {
     font-size: 50px;
 
 }
-.op{
-    background: linear-gradient(45deg,rgb(217, 91, 91),rgb(205, 205, 58));
-}
-.equal{
-    background: linear-gradient(45deg,rgb(230, 25, 10),rgb(243, 7, 192));
-}
-@media only screen and (max-width : 667px){
-    .container{
-        width: 90%;
-    }
-    .display{
-        margin-left: 13px;
-    }
-    .buttons{
-        margin-left: 13px;
-    }
+
+.op {
+    background: linear-gradient(45deg, rgb(217, 91, 91), rgb(205, 205, 58));
 }
 
+.equal {
+    background: linear-gradient(45deg, rgb(230, 25, 10), rgb(243, 7, 192));
+}
+
+@media only screen and (max-width : 667px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(21, 23, 21);
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+        background-color: #ab3636;
+        border-radius: 18px;
+        /* background: black; */
+        backdrop-filter: blur(50px);
+        background: transparent
+    }
+
+    .display {
+        height: 20%;
+        width: 91%;
+        margin-top: 15px;
+        margin-left: 15px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        font-size: 70px;
+        overflow: hidden;
+        background: rgb(47, 46, 46);
+        animation: ch 3slinear infinite;
+        border-radius: 5px;
+        background: transparent;
+    }
+
+    .buttons {
+        height: 55%;
+        width: 90%;
+        margin-left: 15px;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 5px;
+        background: linear-gradient(45deg, rgb(197, 87, 169), rgb(228, 51, 3));
+        border-radius: 8px;
+        background: transparent;
+    }
+
+    button {
+        height: 65px;
+        width: 65px;
+    }
+
+    #ma {
+        background: #f302a9;
+        color: white;
+        transition: all 1s;
+    }
+
+    #or {
+        color: rgb(0, 98, 255);
+        background: #2f2e2e;
+        transition: all 1s;
+    }
+    #ov{
+        color: rgb(128 124 124);
+        background: #2f2e2e;
+        transition: all 1s;
+    }
+    #gr {
+        color: gray;
+        transition: all 1s;
+    }
+
+    .mode {
+        height: 5%;
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-top: 10px;
+
+    }
+
+    .toggle {
+        height: 100%;
+        width: 90px;
+        border-radius: 25px;
+        background-image: url(day.jpg);
+        background-size: cover;
+        margin-right: 16px;
+        display: flex;
+        align-items: center;
+        /* transition: transform 0.5s ease-in-out; Smooth transition */
+        transition: all 1s;
+    }
+    .fa-sun{
+        color: yellow;
+        font-size: 172%;
+    }
+    .fa-moon{
+        color: rgb(0, 157, 255);
+        font-size: 172%;
+    }
+    .circle {
+        height: 37px;
+        width: 37px;
+        border-radius: 50%;
+        background: #797171;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s;
+    }
+    .d{
+        margin-left: 10%;
+    }
+}
