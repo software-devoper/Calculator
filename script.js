@@ -56,58 +56,15 @@ buttons.forEach((btn) => {
     });
 });
 
-
-
 toggle.addEventListener('click', () => {
     beep();
     if (sun.className == 'fa-solid fa-sun') {
-        sun.className = 'fa-solid fa-moon';
-        toggle.style.backgroundImage = "url('night.webp')";
-        circle.style.backgroundColor = '#3b3939';
-        display.style.color = 'black';
-        sun.style.color = 'white';
-        circle.style.transform = "translateX(52px)";
-        body.style.backgroundColor = '#8fa694';
-        setting.style.color = 'white';
-        oper.forEach((wh) => {
-            wh.style.backgroundColor = '#053101a1';
-            wh.style.color = 'white';
-        });
-        number.forEach((wh) => {
-            wh.style.backgroundColor = 'white';
-            wh.style.color = 'black';
-        });
-        acDel.forEach((ac) => {
-            ac.style.backgroundColor = 'rgba(5, 49, 1, 0.63)';
-            ac.style.color = 'white';
-        })
+        applyDarkMode();
+    } else {
+        applyLightMode();
     }
-    else {
-        display.style.color = 'white';
-        sun.className = 'fa-solid fa-sun';
-        toggle.style.backgroundImage = "url('day.jpg')";
-        circle.style.backgroundColor = '#797171';
-        sun.style.color = 'yellow';
-        circle.style.transform = "translateX(0)";
-        body.style.backgroundColor = '#151715';
-        setting.style.color = 'rgb(73, 72, 72)';
+});
 
-        oper.forEach((wh) => {
-            wh.style.backgroundColor = '#f302a9';
-            wh.style.color = 'white';
-        });
-        number.forEach((wh) => {
-            wh.style.backgroundColor = '#2f2e2e';
-            wh.style.color = 'rgb(0, 98, 255)';
-        });
-        acDel.forEach((ac) => {
-            ac.style.backgroundColor = '#2f2e2e'
-            ac.style.color = 'rgb(128 124 124)';
-        })
-
-    }
-
-})
 let setting = document.querySelector('#se');
 setting.addEventListener('click', () => {
     beep();
@@ -118,6 +75,72 @@ setting.addEventListener('click', () => {
     else {
         toggle.style.display = 'flex';
         setting.style.transform = 'rotate(90deg)';
-
     }
 })
+
+// Function to apply dark mode styles
+function applyDarkMode() {
+    console.log('Applying dark mode');
+    sun.className = 'fa-solid fa-moon';
+    toggle.style.backgroundImage = "url('night.webp')";
+    circle.style.backgroundColor = '#3b3939';
+    display.style.color = 'black';
+    sun.style.color = 'white';
+    circle.style.transform = "translateX(52px)";
+    body.style.backgroundColor = '#8fa694';
+    setting.style.color = 'white';
+    oper.forEach((wh) => {
+        wh.style.backgroundColor = '#053101a1';
+        wh.style.color = 'white';
+    });
+    number.forEach((wh) => {
+        wh.style.backgroundColor = 'white';
+        wh.style.color = 'black';
+    });
+    acDel.forEach((ac) => {
+        ac.style.backgroundColor = 'rgba(5, 49, 1, 0.63)';
+        ac.style.color = 'white';
+    });
+}
+
+// Function to apply light mode styles
+function applyLightMode() {
+    console.log('Applying light mode');
+    display.style.color = 'white';
+    sun.className = 'fa-solid fa-sun';
+    toggle.style.backgroundImage = "url('day.jpg')";
+    circle.style.backgroundColor = '#797171';
+    sun.style.color = 'yellow';
+    circle.style.transform = "translateX(0)";
+    body.style.backgroundColor = '#151715';
+    setting.style.color = 'rgb(73, 72, 72)';
+
+    oper.forEach((wh) => {
+        wh.style.backgroundColor = '#f302a9';
+        wh.style.color = 'white';
+    });
+    number.forEach((wh) => {
+        wh.style.backgroundColor = '#2f2e2e';
+        wh.style.color = 'rgb(0, 98, 255)';
+    });
+    acDel.forEach((ac) => {
+        ac.style.backgroundColor = '#2f2e2e';
+        ac.style.color = 'rgb(128 124 124)';
+    });
+}
+
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+darkModeMediaQuery.addEventListener('change', (e) => {
+    if (e.matches) {
+        applyLightMode();
+    } else {
+        applyDarkMode();
+    }
+});
+
+if (darkModeMediaQuery.matches) {
+   
+    applyLightMode();
+} else {
+    applyDarkMode();
+}
