@@ -30,7 +30,6 @@ body {
     justify-content: right;
     align-items: center;
     font-size: 70px;
-    overflow: hidden;
     background: rgb(47, 46, 46);
     animation: ch 3s linear infinite;
     border-radius: 5px;
@@ -112,9 +111,8 @@ button {
 
     .buttons {
         height: 55%;
-        width: 90%;
-        margin-left: 15px;
-        margin-top: 60px;
+        width: 97%;
+        margin-left: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -127,72 +125,113 @@ button {
     }
 
     button {
-        height: 65px;
-        width: 65px;
-    }
-
-    #ma {
-        background: #f302a9;
-        color: white;
-        transition: all 1s;
-    }
-
-    #or {
-        color: rgb(0, 98, 255);
-        background: #2f2e2e;
-        transition: all 1s;
-    }
-    #ov{
-        color: rgb(128 124 124);
-        background: #2f2e2e;
-        transition: all 1s;
-    }
-    #gr {
-        color: gray;
-        transition: all 1s;
-    }
-
-    .mode {
-        height: 5%;
-        width: 100%;
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        margin-top: 10px;
-
-    }
-
-    .toggle {
-        height: 100%;
-        width: 90px;
-        border-radius: 25px;
-        background-image: url(day.jpg);
-        background-size: cover;
-        margin-right: 16px;
-        display: flex;
-        align-items: center;
-        /* transition: transform 0.5s ease-in-out; Smooth transition */
-        transition: all 1s;
-    }
-    .fa-sun{
-        color: yellow;
-        font-size: 172%;
-    }
-    .fa-moon{
-        color: rgb(0, 157, 255);
-        font-size: 172%;
-    }
-    .circle {
-        height: 37px;
-        width: 37px;
-        border-radius: 50%;
-        background: #797171;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 1s;
-    }
-    .d{
-        margin-left: 10%;
+        height: 70px;
+        width: 70px;
+        font-size: 30px;
     }
 }
+
+#ma {
+    background: #f302a9;
+    color: white;
+    font-size: 40px;
+    transition: all 1s;
+}
+
+#or {
+    color: rgb(0, 98, 255);
+    background: #2f2e2e;
+    transition: all 1s;
+}
+
+#ov {
+    color: rgb(128 124 124);
+    background: #2f2e2e;
+    transition: all 1s;
+}
+
+#gr {
+    color: gray;
+    transition: all 1s;
+}
+
+.mode {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.toggle {
+    height: 100%;
+    width: 90px;
+    border-radius: 25px;
+    background-image: url(day.jpg);
+    background-size: cover;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    display: none;
+    transition: all 1s;
+}
+
+.fa-sun {
+    color: yellow;
+    font-size: 172%;
+}
+
+.fa-moon {
+    color: rgb(0, 157, 255);
+    font-size: 172%;
+}
+
+.circle {
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    background: #797171;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.d {
+    margin-left: 10%;
+}
+
+#se {
+    margin-right: 20px;
+    color: rgb(73, 72, 72);
+    margin-bottom: 5px;
+    transition: all 1s;
+}
+#dis{ 
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    white-space: nowrap; 
+    text-align: right; 
+    display: block; 
+    scrollbar-width: thin; 
+    scrollbar-color: #888 #f1f1f1;
+    margin-top: 70px;
+    scrollbar-width: none;
+}
+
+#display::-webkit-scrollbar {
+    height: 5px;
+    display: none;
+}
+
+#display::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+#display::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
