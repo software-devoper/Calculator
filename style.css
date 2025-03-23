@@ -10,15 +10,21 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(67, 90, 107);
+    background-color: rgb(173 232 250);
     transition: all 1s;
 }
 
 .container {
     height: 70vh;
     width: 25vw;
-    background: linear-gradient(to left, rgb(123, 170, 120), rgb(89, 179, 179));
     border-radius: 5px;
+    position: relative;
+}
+
+.content {
+    height: 70vh;
+    width: 25vw;
+    background-color: black;
 }
 
 .display {
@@ -30,14 +36,13 @@ body {
     justify-content: right;
     align-items: center;
     font-size: 70px;
-    background: rgb(47, 46, 46);
     animation: ch 3s linear infinite;
     border-radius: 5px;
     transition: all 1s;
 }
 
 .buttons {
-    height: 70%;
+    height: 53%;
     width: 90%;
     margin-left: 15px;
     margin-top: 10px;
@@ -47,11 +52,10 @@ body {
     flex-wrap: wrap;
     gap: 2px;
     padding: 2px;
-    background: linear-gradient(45deg, rgb(197, 87, 169), rgb(228, 51, 3));
     border-radius: 8px;
 }
 
-button {
+.btn {
     height: 18%;
     width: 20%;
     margin-left: 5px;
@@ -90,7 +94,14 @@ button {
         border-radius: 18px;
         /* background: black; */
         backdrop-filter: blur(50px);
-        background: transparent
+        background: transparent;
+        overflow: hidden;
+    }
+
+    .content {
+        height: 100%;
+        width: 100%;
+        background-color: black;
     }
 
     .display {
@@ -124,15 +135,19 @@ button {
         background: transparent;
     }
 
-    button {
+    .btn {
         height: 70px;
         width: 70px;
         font-size: 30px;
+        box-shadow: 2px 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 #ma {
-    background: #f302a9;
+    background: #1bd3ff;
     color: white;
     font-size: 40px;
     transition: all 1s;
@@ -159,28 +174,16 @@ button {
     height: 5%;
     width: 100%;
     display: flex;
-    justify-content: right;
-    align-items: end;
-    margin-top: 10px;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px
 }
 
-.toggle {
-    height: 100%;
-    width: 90px;
-    border-radius: 25px;
-    background-image: url(day.jpg);
-    background-size: cover;
-    margin-right: 16px;
-    display: flex;
-    align-items: center;
-    display: none;
-    transition: all 1s;
-}
 
 .fa-sun {
-    color: yellow;
+    color: #31312b;
     font-size: 172%;
+    transition: all 0.5s;
 }
 
 .fa-moon {
@@ -209,13 +212,14 @@ button {
     margin-bottom: 5px;
     transition: all 1s;
 }
-#dis{ 
-    overflow-x: auto; 
-    overflow-y: hidden; 
-    white-space: nowrap; 
-    text-align: right; 
-    display: block; 
-    scrollbar-width: thin; 
+
+#dis {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    text-align: right;
+    display: block;
+    scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
     margin-top: 90px;
     scrollbar-width: none;
@@ -233,4 +237,593 @@ button {
 
 #display::-webkit-scrollbar-track {
     background: #f1f1f1;
+}
+
+.toggle {
+    margin-right: 10px;
+}
+
+.unit {
+    margin-left: 10px;
+}
+
+.unitPage {
+    position: absolute;
+    background-color: #151715;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.iconPlace {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#arrow {
+    margin-right: 10px;
+}
+
+.units {
+    width: 100%;
+    height: 60%;
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.uni {
+    height: 80px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 38%;
+}
+
+#s {
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    transition: all 1s;
+}
+
+#del {
+    transition: all 1s;
+}
+
+#navShow {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 4px;
+}
+
+#PAGE {
+    width: 100%;
+    height: 5%;
+    background-color: red;
+}
+
+/* for currency convertor */
+
+
+.page {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.coment {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    gap: 4px;
+    display: none;
+}
+
+.input {
+    height: 90%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input1 {
+    height: 45%;
+    width: 90%;
+    background-color: rgb(93, 93, 92);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input2 {
+    height: 45%;
+    width: 90%;
+    background-color: rgb(93, 93, 92);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.exchange {
+    height: 85%;
+    width: 20%;
+    background-color: rgb(93, 93, 92);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.inEx {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4px;
+}
+
+#upper {
+    height: 50%;
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: transparent;
+
+}
+
+#lower {
+    height: 40%;
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.selectInput {
+    height: 40%;
+    width: 45%;
+    cursor: pointer;
+    margin-top: 3px;
+
+}
+
+.selectInput1 {
+    height: 40%;
+    width: 45%;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.SelectPage {
+    background-color: rgb(29, 28, 28);
+    width: 100%;
+    border-radius: 20px;
+    position: absolute;
+    height: 100%;
+    transform: translateY(100%);
+    transition: all 0.5s ease-in;
+}
+
+.cut {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 5%;
+
+}
+
+#close {
+    cursor: pointer;
+}
+
+.n {
+    color: white;
+    font-size: 30px
+}
+
+.search {
+    width: 100%;
+    height: 7%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+#searchInput {
+    width: 70%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: white;
+}
+
+.mix {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: gray;
+    border-radius: 24px;
+}
+
+.serachIcon {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon {
+    font-size: 25px;
+}
+
+#list {
+    height: 30px;
+    width: 100%;
+    background-color: rgb(31, 30, 30);
+    margin-bottom: 8px;
+    margin-top: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.currencyList {
+    height: 70%;
+    width: 100%;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 47px;
+    margin-bottom: 42px;
+    padding-bottom: 40px
+}
+
+::-webkit-scrollbar {
+    width: none;
+    display: none;
+}
+
+.currencyButtons {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* gap: 5px; */
+    margin-left: 20px;
+    margin-top: 11%;
+}
+
+#CB {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: rgb(43, 42, 42);
+    margin: 5px;
+    color: white;
+    font-size: 28px;
+    border: none;
+    outline: none;
+}
+
+.mainPage {
+    height: 95%;
+    width: 100%;
+}
+
+#rotate {
+    transform: rotate(90deg);
+    color: #1d1c1c
+}
+
+.list {
+    height: 5%;
+    width: 94%;
+    background-color: transparent;
+    color: rgb(217, 211, 211);
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid gray;
+    cursor: pointer;
+    padding-bottom: 13px;
+    margin-left: 7px
+}
+
+@media only screen and (max-width : 667px) {
+    .page {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.numbers {
+    height: 100%;
+    width: 74%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.oprator {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 4%;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.he {
+    width: 91%;
+    /* background: red; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+/* for length Conversion */
+#CL{
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+}
+#lengthPage{
+    height: 90%;
+    width: 100%;
+    background: linear-gradient(45deg,red,green,blue);
+    margin-bottom: 20px;
+}
+
+.mainlengthContainer {
+    height: 75vh;
+    width: 25vw;
+    position: absolute;
+    overflow: hidden;
+}
+
+.lengthContainer {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    /* position: absolute; */
+}
+
+.inputs {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lengthButtons {
+    height: 50%;
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lengthInput1 {
+    height: 45%;
+    width: 95%;
+    background-color: #363636;
+    border-radius: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lengthInput2 {
+    height: 45%;
+    width: 95%;
+    background-color: #363636;
+    border-radius: 10px;
+}
+
+.selectLenght1 {
+    height: 30%;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+.selectLenght2 {
+    height: 30%;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+#lInput {
+    height: 40px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.lresult {
+    height: 40px;
+    width: 90%;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.lnum {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5%;
+
+}
+
+.lop {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.allb {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: #3c3a3a;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectLengthUnit {
+    width: 100%;
+    position: relative;
+    background-color: #3d3d3d;
+    height: 90%;
+    position: absolute;
+    /* left: 0%; */
+    /* bottom: 10%; */
+    bottom: -90%;
+    border-radius: 20px;
+    transition: all 1s;
+}
+
+.closeLengthPage {
+    height: 10%;
+    width: 100%;
+    background-color: #2b2a2a;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    gap: 25%;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.listLength {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 90%;
+    font-size: 20px;
+    color: #b1aeae;
+}
+
+.lengthlist {
+    border-bottom: 1px solid black;
+    width: 100%;
+    /* background-color: white; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#closePage{
+    cursor: pointer;
+}
+.Unit1{
+    width: 100%;
+}
+@media only screen and (max-width : 667px){
+    .mainlengthContainer {
+        height: 100vh;
+        width: 100vw;
+    }
+    .lnum{
+        height: 60%;
+        width: 75%;
+    }
+    .lop{
+        height: 60%;
+        width: 14%;
+    }
 }
