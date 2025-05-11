@@ -10,13 +10,20 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(173 232 250);
+    background-color: rgb(47, 159, 193);
     transition: all 1s;
 }
 
-.container {
+.mainContainer {
     height: 70vh;
-    width: 25vw;
+    width: 27vw;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
     border-radius: 5px;
     position: relative;
 }
@@ -85,6 +92,15 @@ body {
         height: 100vh;
         width: 100vw;
         background-color: rgb(21, 23, 21);
+        overflow: hidden;
+    }
+
+    .mainContainer {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        border-radius: 5px;
+        position: absolute;
     }
 
     .container {
@@ -95,7 +111,6 @@ body {
         /* background: black; */
         backdrop-filter: blur(50px);
         background: transparent;
-        overflow: hidden;
     }
 
     .content {
@@ -136,8 +151,8 @@ body {
     }
 
     .btn {
-        height: 70px;
-        width: 70px;
+        height: 18%;
+        width: 20%;
         font-size: 30px;
         box-shadow: 2px 1px;
         display: flex;
@@ -266,6 +281,7 @@ body {
 
 #arrow {
     margin-right: 10px;
+    margin-left: 7px;
 }
 
 .units {
@@ -323,7 +339,7 @@ body {
 .page {
     height: 100%;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
     position: relative;
     overflow: hidden;
 }
@@ -619,8 +635,9 @@ button {
     justify-content: left;
     align-items: center;
 }
+
 /* for length Conversion */
-#CL{
+#CL {
     height: 5%;
     width: 100%;
     display: flex;
@@ -628,10 +645,11 @@ button {
     align-items: center;
     gap: 5px;
 }
-#lengthPage{
+
+#lengthPage {
     height: 90%;
     width: 100%;
-    background: linear-gradient(45deg,red,green,blue);
+    background: linear-gradient(45deg, red, green, blue);
     margin-bottom: 20px;
 }
 
@@ -765,15 +783,15 @@ button {
     background-color: #3d3d3d;
     height: 90%;
     position: absolute;
-    /* left: 0%; */
-    /* bottom: 10%; */
     bottom: -90%;
     border-radius: 20px;
     transition: all 1s;
+    height: 68%;
+    overflow: scroll
 }
 
 .closeLengthPage {
-    height: 10%;
+    height: 54px;
     width: 100%;
     background-color: #2b2a2a;
     display: flex;
@@ -792,38 +810,625 @@ button {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 90%;
+    height: 74%;
     font-size: 20px;
     color: #b1aeae;
+    overflow: scroll;
 }
 
 .lengthlist {
     border-bottom: 1px solid black;
     width: 100%;
-    /* background-color: white; */
     text-align: center;
-    display: flex;
+    display: flex
+;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    height: 53px;
 }
-#closePage{
+
+#closePage {
     cursor: pointer;
 }
-.Unit1{
+
+.Unit1 {
     width: 100%;
 }
-@media only screen and (max-width : 667px){
+
+@media only screen and (max-width : 667px) {
     .mainlengthContainer {
         height: 100vh;
         width: 100vw;
     }
-    .lnum{
+
+    .lnum {
         height: 60%;
         width: 75%;
     }
-    .lop{
+
+    .lop {
         height: 60%;
         width: 14%;
     }
+}
+
+/* for AreaCalculate */
+.AreaNav {
+    height: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 14px
+}
+
+.AreaPage {
+    height: 94%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.areaContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.areaoneANDtwo {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.AreaOne {
+    height: 40%;
+    width: 90%;
+    background-color: rgb(17 16 16);
+    border-radius: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.AreaTwo {
+    height: 40%;
+    width: 90%;
+    background-color: rgb(17 16 16);
+    border-radius: 10px;
+}
+
+.AreaBt {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.abt {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(17, 17, 17);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.ANUM {
+    height: 90%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.AOP {
+    height: 90%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-top: 14px;
+}
+
+.AreaSelectANDInput {
+    height: 50%;
+    width: 80%;
+
+}
+
+.AreaInput {
+    height: 50%;
+    width: 80%;
+}
+
+.ArIn {
+    height: 99%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    color: rgb(57, 57, 57);
+    margin-left: 5px;
+}
+
+.AreaSelect1 {
+    height: 90%;
+    width: 90%;
+    font-size: 20px;
+    color: gray;
+    margin-top: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.AreaSelectANDResult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 37px
+}
+
+.AreaSelect2 {
+    height: 90%;
+    width: 90%;
+    font-size: 20px;
+    color: gray;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
+.areaResult {
+    width: 90%;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 40px;
+    font-size: 20px;
+}
+
+.areaPage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(22, 20, 20);
+    bottom: -100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: all 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+#units {
+    width: 100%;
+    text-align: center;
+    color: rgb(172, 170, 170);
+    cursor: pointer;
+    border-bottom: 0.5px solid gray;
+}
+
+.closeArea {
+    height: 45px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 31px;
+    margin-bottom: 40px;
+    color: rgb(213 205 205)
+}
+
+.areaUnit {
+    width: 64%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-right: 21px; */
+    height: 100%;
+    /* padding: 5px; */
+    padding-right: 10px;
+    padding: 15px;
+}
+
+.pages {
+    height: 90%;
+    width: 100%;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 68px;
+}
+
+.cl {
+    cursor: pointer;
+}
+
+@media only screen and (max-width : 667px) {
+    .areaContainer {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/* for volume */
+.VolumeNav {
+    height: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+.VolumePage {
+    height: 94%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.areaContainer {
+    position: relative;
+    height: 80vh;
+    width: 22vw;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.areaoneANDtwo {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.AreaOne {
+    height: 40%;
+    width: 90%;
+    background-color: rgb(17 16 16);
+    border-radius: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.AreaTwo {
+    height: 40%;
+    width: 90%;
+    background-color: rgb(17 16 16);
+    border-radius: 10px;
+}
+
+.AreaBt {
+    height: 54%;
+    width: 100%;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.abt {
+    height: 19%;
+    width: 24%;
+    background-color: rgb(17, 17, 17);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 16px;
+    cursor: pointer;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ANUM {
+    height: 90%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.AOP {
+    height: 90%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    padding-top: 21px
+}
+
+.AreaSelectANDInput {
+    height: 50%;
+    width: 80%;
+
+}
+
+.AreaInput {
+    height: 50%;
+    width: 80%;
+}
+
+.ArIn {
+    height: 99%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    color: rgb(57, 57, 57);
+    margin-left: 5px;
+}
+
+.AreaSelect1 {
+    height: 90%;
+    width: 90%;
+    font-size: 20px;
+    color: gray;
+    margin-top: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.AreaSelectANDResult {
+    height: 40%;
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.AreaSelect2 {
+    height: 90%;
+    width: 90%;
+    font-size: 20px;
+    color: gray;
+    margin-top: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.areaResult {
+    width: 90%;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 40px;
+    font-size: 25px;
+    padding-left: 5px;
+}
+
+.areaPage {
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    background-color: rgb(22, 20, 20);
+    bottom: -90%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: all 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+h1 {
+    width: 100px;
+    text-align: center;
+    color: rgb(172, 170, 170);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.closeArea {
+    height: 53px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 30 px;
+    margin-bottom: 40px;
+    color: rgb(213 205 205);
+}
+
+.areaUnit {
+    width: 66%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-right: 10px;
+    font-size: 30px;
+    padding: 8px;
+}
+
+.pages {
+    height: 82%;
+    width: 100%;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap
+}
+
+.cl {
+    cursor: pointer;
+}
+
+@media only screen and (max-width : 667px) {
+    .areaContainer {
+        height: 95%;
+        width: 100%;
+    }
+}
+
+/* // weight Conversion */
+.weightNav {
+    height: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+.weightPage {
+    height: 94%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Temperature Conversion */
+.TemperatureNav {
+    height: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.TemperaturePage {
+    height: 94%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Speed conversion */
+.SpeedNav {
+    height: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.SpeedPage {
+    height: 94%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* pressure conversion */
+.PressureNav {
+    height: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.PressurePage {
+    height: 94%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* power conversion */
+.PowerNav {
+    height: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.PowerPage {
+    height: 94%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AreaPage{
+    height: 90%;
+}
+.VolumePage{
+    height: 90%;
+}
+.PressurePage{
+    height: 90%;
+}
+.PowerPage{
+    height: 90%;
+}
+.SpeedPage{
+    height: 90%;
+}
+.TemperaturePage{
+    height: 90%;
+}
+.weightPage{
+    height: 90%;
 }
