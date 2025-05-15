@@ -14,8 +14,8 @@ let menuIcon = document.querySelector('#menu');
 let del = document.querySelector('#del');
 let Units = document.querySelectorAll('.uni');
 let mainContainer = document.querySelector('.mainContainer');
-let units=document.querySelector('.units');
-let AllU=document.querySelectorAll('.u');
+let units = document.querySelector('.units');
+let AllU = document.querySelectorAll('.u');
 let str = ' ';
 function beep() {
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -81,7 +81,7 @@ toggle.addEventListener('click', () => {
     }
 });
 
-let Color=null;
+let Color = null;
 // Function to apply dark mode styles
 function
     applyLightMode() {
@@ -103,12 +103,12 @@ function
         ac.style.color = 'white';
     });
     del.style.fill = 'white';
-    unitPage.style.backgroundColor='rgb(173, 232, 250)';
-    units.style.color='rgba(0, 234, 255, 0.63)';
-   Color=1;
-   AllU.forEach((val)=>{
-    val.style.color='black';
-   })
+    unitPage.style.backgroundColor = 'rgb(173, 232, 250)';
+    units.style.color = 'rgba(0, 234, 255, 0.63)';
+    Color = 1;
+    AllU.forEach((val) => {
+        val.style.color = 'black';
+    })
 }
 
 // Function to apply light mode styles
@@ -131,12 +131,12 @@ function applyDarkMode() {
         ac.style.color = 'rgb(128 124 124)';
     });
     del.style.fill = 'rgb(128, 124, 124)';
-    unitPage.style.backgroundColor='#151715';
-    unitPage.style.color='white';
-    units.style.color='white';
-    Color=2;
-    AllU.forEach((val)=>{
-        val.style.color='white';
+    unitPage.style.backgroundColor = '#151715';
+    unitPage.style.color = 'white';
+    units.style.color = 'white';
+    Color = 2;
+    AllU.forEach((val) => {
+        val.style.color = 'white';
     })
 }
 
@@ -225,35 +225,35 @@ Units.forEach((val, i) => {
 });
 
 let CurrencyConvertor = () => {
-    if(Color==1){
-        TC='black';
+    if (Color == 1) {
+        TC = 'black';
     }
-    else{
-       TC='white';
+    else {
+        TC = 'white';
     }
     let currencyPage = document.querySelector("#currency");
     if (!currencyPage) {
         mainContainer.style.display = "none";
         let currency = document.createElement("div");
-        let c=null;
-        let TC=null;
-        let BC=null;
-        let sbc=null;
-        if(Color==1){
-            currency.style.backgroundColor='rgb(173, 232, 250)';
-            c='white';
-            TC='black';
-            BC='white';
-            sbc='rgb(118 182 202)';
+        let c = null;
+        let TC = null;
+        let BC = null;
+        let sbc = null;
+        if (Color == 1) {
+            currency.style.backgroundColor = 'rgb(173, 232, 250)';
+            c = 'white';
+            TC = 'black';
+            BC = 'white';
+            sbc = 'rgb(118 182 202)';
         }
-        else{
-           currency.style.backgroundColor='rgb(21, 23, 21)';
-           c='rgb(93, 93, 92)';
-           TC='white';
-           BC='rgb(43, 42, 42)';
-           sbc='rgb(29, 28, 28)';
+        else {
+            currency.style.backgroundColor = 'rgb(21, 23, 21)';
+            c = 'rgb(93, 93, 92)';
+            TC = 'white';
+            BC = 'rgb(43, 42, 42)';
+            sbc = 'rgb(29, 28, 28)';
         }
-        
+
         currency.setAttribute("id", "currency");
         currency.className = "content";
         document.body.appendChild(currency);
@@ -300,19 +300,19 @@ let CurrencyConvertor = () => {
     <button style="background-color:${BC};color:${TC}" id="CB">7</button>
     <button style="background-color:${BC};color:${TC}" id="CB">8</button>
     <button style="background-color:${BC};color:${TC}" id="CB">9</button>
+    <button style="background-color:${BC};color:${TC}" id="CB">AC</button>
     <button style="background-color:${BC};color:${TC}" id="CB">4</button>
     <button style="background-color:${BC};color:${TC}" id="CB">5</button>
     <button style="background-color:${BC};color:${TC}" id="CB">6</button>
-    <button style="background-color:${BC};color:${TC}" id="CB">1</button>
-    <button style="background-color:${BC};color:${TC}" id="CB">2</button>
-    <button style="background-color:${BC};color:${TC}" id="CB">3</button>
-    <button style="background-color:${BC};color:${TC}" id="CB">00</button>
-    <button style="background-color:${BC};color:${TC}" id="CB">0</button>
-    <button style="background-color:${BC};color:${TC}" id="CB">.</button>
-</div>
-<div class="oprator">
-    <button style="background-color:${BC};color:${TC}" id="CB">AC</button>
     <button style="background-color:${BC}" id="CB" class="rem" ><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="${TC}"><path d="m456-320 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56Zm-96 160q-19 0-36-8.5T296-192L80-480l216-288q11-15 28-23.5t36-8.5h440q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H360ZM180-480l180 240h440v-480H360L180-480Zm400 0Z"/></svg></button>
+    </div>
+    <div class="oprator">
+    <button style="background-color:${BC};color:${TC}" id="OB">1</button>
+    <button style="background-color:${BC};color:${TC}" id="OB">2</button>
+    <button style="background-color:${BC};color:${TC}" id="OB">3</button>
+    <button style="background-color:${BC};color:${TC}" id="OB">00</button>
+    <button style="background-color:${BC};color:${TC}" id="OB">0</button>
+    <button style="background-color:${BC};color:${TC}" id="OB">.</button>    
 </div>
  </div>
 </div>`
@@ -323,7 +323,7 @@ let CurrencyConvertor = () => {
             mainContainer.style.display = "block";
         });
     }
-    let AllButtons = document.querySelectorAll('#CB');
+    let AllButtons = document.querySelectorAll('button');
     let UpperSelectCurreny = document.querySelector('.selectInput');
     let LowerSelectCurreny = document.querySelector('.selectInput1');
     let Input = document.querySelector('#upper');
@@ -370,10 +370,10 @@ let CurrencyConvertor = () => {
             Keys.forEach((val) => {
                 let List = document.createElement('div');
                 List.className = 'list';
-                List.style.color=`${TC}`;
+                List.style.color = `${TC}`;
                 List.innerText = val;
-                List.style.color=
-                currencylist.appendChild(List);
+                List.style.color =
+                    currencylist.appendChild(List);
             });
 
             AttachClickEvents();
@@ -487,26 +487,26 @@ let LengthCalculate = () => {
         mainContainer.style.display = 'none';
         length.setAttribute('id', 'length');
         length.className = 'content';
-        let LC=null;
-        let LI=null;
-        let LIC=null;
-        let NC=null;
-        let PC=null;
-        if(Color==1){
-            length.style.backgroundColor='rgb(173, 232, 250)';
-            LC='rgb(173, 232, 250)';
-            LI='white';
-            LIC='black';
-            NC='#6cd5e5';
-            PC='rgb(173, 232, 250)';
+        let LC = null;
+        let LI = null;
+        let LIC = null;
+        let NC = null;
+        let PC = null;
+        if (Color == 1) {
+            length.style.backgroundColor = 'rgb(173, 232, 250)';
+            LC = 'rgb(173, 232, 250)';
+            LI = 'white';
+            LIC = 'black';
+            NC = '#6cd5e5';
+            PC = 'rgb(173, 232, 250)';
         }
-        else{
-           length.style.backgroundColor='rgb(21, 23, 21)';
-           LC='rgb(21, 23, 21)'
-           LI='#363636';
-           LIC='white';
-           NC='#535050';
-           PC='#3d3d3d';
+        else {
+            length.style.backgroundColor = 'rgb(21, 23, 21)';
+            LC = 'rgb(21, 23, 21)'
+            LI = '#363636';
+            LIC = 'white';
+            NC = '#535050';
+            PC = '#3d3d3d';
         }
         coment.innerHTML = `<svg id="back" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="${LIC}"><path d="M359.33-241.33 120-480.67 359.33-720l47.34 47.33L248-514h592v66.67H248l158.67 158.66-47.34 47.34Z"/></svg><P style="color:${LIC}">Length Conversion</p>  `;
         lengthPage.innerHTML = `  <div class="mainlengthContainer">
@@ -549,8 +549,6 @@ let LengthCalculate = () => {
           <button style="background-color:${LI};color:${LIC}" class="allb">00</button>
           <button style="background-color:${LI};color:${LIC}" class="allb">0</button>
           <button style="background-color:${LI};color:${LIC}" class="allb">.</button>
-        </div>
-        <div class="lop">
           <button style="background-color:${LI};color:${LIC}" class="allb">AC</button>
           <button style="background-color:${LI}" class="allb re"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="${LIC}"><path d="M450.67-324 560-433.33 669.33-324l47.34-47.33-110-108.67 108.66-108.67L668-636 560-526.67 450.67-636l-47.34 47.33 110 108.67-110 108.67L450.67-324Zm-97.34 164q-15.83 0-30-7.08-14.16-7.09-23.33-19.59L80-480l219.33-293.33q9.17-12.5 23.34-19.59 14.16-7.08 30-7.08H814q27.5 0 47.08 19.58 19.59 19.59 19.59 47.09v506.66q0 27.5-19.59 47.09Q841.5-160 814-160H353.33Zm-190-320 190 253.33H814v-506.66H353.33L163.33-480ZM584-480Z"/></svg></button>
         </div>
@@ -678,23 +676,23 @@ let AreaCalculate = () => {
         AreaNav.className = 'AreaNav';
         Area.setAttribute('id', 'Area');
         Area.className = 'content';
-        let IC=null;
-        let TC=null;
-        let PB=null;
-        let NC=null;
-        if(Color==1){
-            Area.style.backgroundColor='rgb(173, 232, 250)';
-            IC='White';
-            TC='black';
-            PB='rgb(173, 232, 250)';
-             NC='#6cd5e5';
+        let IC = null;
+        let TC = null;
+        let PB = null;
+        let NC = null;
+        if (Color == 1) {
+            Area.style.backgroundColor = 'rgb(173, 232, 250)';
+            IC = 'White';
+            TC = 'black';
+            PB = 'rgb(173, 232, 250)';
+            NC = '#6cd5e5';
         }
-        else{
-           Area.style.backgroundColor='rgb(21, 23, 21)';
-           IC='black'
-           TC='white';
-           PB='rgb(22, 20, 20)';
-            NC='#323434';
+        else {
+            Area.style.backgroundColor = 'rgb(21, 23, 21)';
+            IC = 'black'
+            TC = 'white';
+            PB = 'rgb(22, 20, 20)';
+            NC = '#323434';
         }
         AreaPage.innerHTML = ` <div class="areaContainer">
         <div class="areaPage" style="background-color:${PB}">
@@ -859,23 +857,23 @@ let VolumeCalculate = () => {
         let VolumePage = document.createElement('div');
         Volume.setAttribute('id', 'Volume');
         Volume.className = 'content';
-        let IC=null;
-        let TC=null;
-        let PB=null;
-        let NC=null;
-        if(Color==1){
-            Volume.style.backgroundColor='rgb(173, 232, 250)';
-            IC='White';
-            TC='black';
-            PB='rgb(173, 232, 250)';
-             NC='#6cd5e5';
+        let IC = null;
+        let TC = null;
+        let PB = null;
+        let NC = null;
+        if (Color == 1) {
+            Volume.style.backgroundColor = 'rgb(173, 232, 250)';
+            IC = 'White';
+            TC = 'black';
+            PB = 'rgb(173, 232, 250)';
+            NC = '#6cd5e5';
         }
-        else{
-           Volume.style.backgroundColor='rgb(21, 23, 21)';
-           IC='black'
-           TC='white';
-           PB='rgb(22, 20, 20)';
-            NC='#323434';
+        else {
+            Volume.style.backgroundColor = 'rgb(21, 23, 21)';
+            IC = 'black'
+            TC = 'white';
+            PB = 'rgb(22, 20, 20)';
+            NC = '#323434';
         }
         VolumeNav.className = 'VolumeNav';
         VolumePage.className = 'VolumePage';
@@ -1057,23 +1055,23 @@ let WeightCalculate = () => {
         WeightPage.className = "weightPage"
         Weight.setAttribute('id', 'Weight');
         Weight.className = 'content';
-        let IC=null;
-        let TC=null;
-        let PB=null;
-        let NC=null;
-        if(Color==1){
-            Weight.style.backgroundColor='rgb(173, 232, 250)';
-            IC='White';
-            TC='black';
-            PB='rgb(173, 232, 250)';
-             NC='#6cd5e5';
+        let IC = null;
+        let TC = null;
+        let PB = null;
+        let NC = null;
+        if (Color == 1) {
+            Weight.style.backgroundColor = 'rgb(173, 232, 250)';
+            IC = 'White';
+            TC = 'black';
+            PB = 'rgb(173, 232, 250)';
+            NC = '#6cd5e5';
         }
-        else{
-           Weight.style.backgroundColor='rgb(21, 23, 21)';
-           IC='black'
-           TC='white';
-           PB='rgb(22, 20, 20)';
-            NC='#323434';
+        else {
+            Weight.style.backgroundColor = 'rgb(21, 23, 21)';
+            IC = 'black'
+            TC = 'white';
+            PB = 'rgb(22, 20, 20)';
+            NC = '#323434';
         }
         WeightNav.innerHTML = `<svg id="back" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="${TC}"><path d="M359.33-241.33 120-480.67 359.33-720l47.34 47.33L248-514h592v66.67H248l158.67 158.66-47.34 47.34Z"/></svg><p style="color:${TC}">Weight Conversion</p>`;
         WeightPage.innerHTML = ` <div class="areaContainer">
@@ -1251,23 +1249,23 @@ let TemperatureCalculate = () => {
         Temperature.className = 'content';
         TemperatureNav.className = 'TemperatureNav'
         TemperaturePage.className = 'TemperaturePage'
-        let IC=null;
-        let TC=null;
-        let PB=null;
-        let NC=null;
-        if(Color==1){
-            Temperature.style.backgroundColor='rgb(173, 232, 250)';
-            IC='White';
-            TC='black';
-            PB='rgb(173, 232, 250)';
-             NC='#6cd5e5';
+        let IC = null;
+        let TC = null;
+        let PB = null;
+        let NC = null;
+        if (Color == 1) {
+            Temperature.style.backgroundColor = 'rgb(173, 232, 250)';
+            IC = 'White';
+            TC = 'black';
+            PB = 'rgb(173, 232, 250)';
+            NC = '#6cd5e5';
         }
-        else{
-           Temperature.style.backgroundColor='rgb(21, 23, 21)';
-           IC='black'
-           TC='white';
-           PB='rgb(22, 20, 20)';
-            NC='#323434';
+        else {
+            Temperature.style.backgroundColor = 'rgb(21, 23, 21)';
+            IC = 'black'
+            TC = 'white';
+            PB = 'rgb(22, 20, 20)';
+            NC = '#323434';
         }
         TemperatureNav.innerHTML = `<svg id="back" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="${TC}"><path d="M359.33-241.33 120-480.67 359.33-720l47.34 47.33L248-514h592v66.67H248l158.67 158.66-47.34 47.34Z"/></svg><p style=color:${TC}>Temperature Conversion</p>`;
         TemperaturePage.innerHTML = ` <div class="areaContainer">
@@ -1425,23 +1423,23 @@ let SpeedCalculate = () => {
         SpeedNav.className = 'SpeedNav';
         Speed.className = 'content';
         SpeedPage.className = 'SpeedPage';
-        let IC=null;
-        let TC=null;
-        let PB=null;
-        let NC=null;
-        if(Color==1){
-            Speed.style.backgroundColor='rgb(173, 232, 250)';
-            IC='White';
-            TC='black';
-            PB='rgb(173, 232, 250)';
-             NC='#6cd5e5';
+        let IC = null;
+        let TC = null;
+        let PB = null;
+        let NC = null;
+        if (Color == 1) {
+            Speed.style.backgroundColor = 'rgb(173, 232, 250)';
+            IC = 'White';
+            TC = 'black';
+            PB = 'rgb(173, 232, 250)';
+            NC = '#6cd5e5';
         }
-        else{
-           Speed.style.backgroundColor='rgb(21, 23, 21)';
-           IC='black'
-           TC='white';
-           PB='rgb(22, 20, 20)';
-            NC='#323434';
+        else {
+            Speed.style.backgroundColor = 'rgb(21, 23, 21)';
+            IC = 'black'
+            TC = 'white';
+            PB = 'rgb(22, 20, 20)';
+            NC = '#323434';
         }
         SpeedNav.innerHTML = `<svg id="back" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="${TC}"><path d="M359.33-241.33 120-480.67 359.33-720l47.34 47.33L248-514h592v66.67H248l158.67 158.66-47.34 47.34Z"/></svg><p style="color:${TC}">Speed Conversion</p>`;
         SpeedPage.innerHTML = ` <div class="areaContainer">
@@ -1602,23 +1600,23 @@ let PressureCalculate = () => {
         Pressure.className = 'content';
         PressureNav.className = 'PressureNav';
         PressurePage.className = 'PressurePage';
-        let IC=null;
-        let TC=null;
-        let PB=null;
-        let NC=null;
-        if(Color==1){
-            Pressure.style.backgroundColor='rgb(173, 232, 250)';
-            IC='White';
-            TC='black';
-            PB='rgb(173, 232, 250)';
-             NC='#6cd5e5';
+        let IC = null;
+        let TC = null;
+        let PB = null;
+        let NC = null;
+        if (Color == 1) {
+            Pressure.style.backgroundColor = 'rgb(173, 232, 250)';
+            IC = 'White';
+            TC = 'black';
+            PB = 'rgb(173, 232, 250)';
+            NC = '#6cd5e5';
         }
-        else{
-           Pressure.style.backgroundColor='rgb(21, 23, 21)';
-           IC='black'
-           TC='white';
-           PB='rgb(22, 20, 20)';
-            NC='#323434';
+        else {
+            Pressure.style.backgroundColor = 'rgb(21, 23, 21)';
+            IC = 'black'
+            TC = 'white';
+            PB = 'rgb(22, 20, 20)';
+            NC = '#323434';
         }
         PressureNav.innerHTML = `<svg id="back" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="${TC}"><path d="M359.33-241.33 120-480.67 359.33-720l47.34 47.33L248-514h592v66.67H248l158.67 158.66-47.34 47.34Z"/></svg><p style="color:${TC}">Pressure Conversion</p>`;
         PressurePage.innerHTML = `<div class="areaContainer">
@@ -1791,23 +1789,23 @@ let PowerCalculate = () => {
         Power.className = 'content';
         PowerNav.className = 'PowerNav';
         PowerPage.className = 'PowerPage';
-        let IC=null;
-        let TC=null;
-        let PB=null;
-        let NC=null;
-        if(Color==1){
-            Power.style.backgroundColor='rgb(173, 232, 250)';
-            IC='White';
-            TC='black';
-            PB='rgb(173, 232, 250)';
-             NC='#6cd5e5';
+        let IC = null;
+        let TC = null;
+        let PB = null;
+        let NC = null;
+        if (Color == 1) {
+            Power.style.backgroundColor = 'rgb(173, 232, 250)';
+            IC = 'White';
+            TC = 'black';
+            PB = 'rgb(173, 232, 250)';
+            NC = '#6cd5e5';
         }
-        else{
-           Power.style.backgroundColor='rgb(21, 23, 21)';
-           IC='black'
-           TC='white';
-           PB='rgb(22, 20, 20)';
-            NC='#323434';
+        else {
+            Power.style.backgroundColor = 'rgb(21, 23, 21)';
+            IC = 'black'
+            TC = 'white';
+            PB = 'rgb(22, 20, 20)';
+            NC = '#323434';
         }
         PowerNav.innerHTML = `<svg id="back" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="${TC}"><path d="M359.33-241.33 120-480.67 359.33-720l47.34 47.33L248-514h592v66.67H248l158.67 158.66-47.34 47.34Z"/></svg><p style="color:${TC}">Power Conversion</p>`;
         PowerPage.innerHTML = `  <div class="areaContainer">
